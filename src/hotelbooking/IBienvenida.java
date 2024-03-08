@@ -15,12 +15,12 @@ import javax.swing.JOptionPane;
  *
  * @author KelvinCi
  */
-public class IHotelReservation extends javax.swing.JFrame {
+public class IBienvenida extends javax.swing.JFrame {
 
     /**
      * Creates new form IHotelReservation
      */
-    public IHotelReservation() {
+    public IBienvenida() {
         initComponents();
     }
 

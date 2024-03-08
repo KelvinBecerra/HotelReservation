@@ -41,6 +41,11 @@ public class IHome extends javax.swing.JPanel {
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 338, -1, -1));
 
         Buscar.setText("Buscar");
+        Buscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BuscarActionPerformed(evt);
+            }
+        });
         add(Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, -1, 140));
 
         BuscarenCheckin.setText("Check-In");
@@ -55,6 +60,11 @@ public class IHome extends javax.swing.JPanel {
         add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, 90, 140));
 
         registro.setText("Registro");
+        registro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registroActionPerformed(evt);
+            }
+        });
         add(registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, -1, 140));
 
         verhistorial.setText("Ver historial");
@@ -64,12 +74,41 @@ public class IHome extends javax.swing.JPanel {
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 70, -1));
 
         jButton1.setText("Atras");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 410, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        ICheckOut nuevo=new ICheckOut();
+        this.setVisible(false);
+        nuevo.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
+        // TODO add your handling code here:
+        Buscar nuevoBuscar=new Buscar();
+        this.setVisible(false);
+        nuevoBuscar.setVisible(true);
+    }//GEN-LAST:event_BuscarActionPerformed
+
+    private void registroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registroActionPerformed
+        // TODO add your handling code here:
+        IRegistro nuevoRegistro=new IRegistro();
+        this.setVisible(false);
+        nuevoRegistro.setVisible(true);
+    }//GEN-LAST:event_registroActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        IBienvenida nueva=new IBienvenida();
+        this.setVisible(false);
+        nueva.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

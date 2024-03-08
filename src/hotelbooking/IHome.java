@@ -26,19 +26,60 @@ public class IHome extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jPanel1 = new javax.swing.JPanel();
+        Buscar = new javax.swing.JButton();
+        BuscarenCheckin = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        registro = new javax.swing.JButton();
+        verhistorial = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 338, -1, -1));
+
+        Buscar.setText("Buscar");
+        add(Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, -1, 140));
+
+        BuscarenCheckin.setText("Check-In");
+        add(BuscarenCheckin, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, -1, 120));
+
+        jButton3.setText("Check-Out");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, 90, 140));
+
+        registro.setText("Registro");
+        add(registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, -1, 140));
+
+        verhistorial.setText("Ver historial");
+        add(verhistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, -1, 120));
+
+        jLabel6.setText("     HOME");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 70, -1));
+
+        jButton1.setText("Atras");
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 410, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Buscar;
+    private javax.swing.JButton BuscarenCheckin;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton registro;
+    private javax.swing.JButton verhistorial;
     // End of variables declaration//GEN-END:variables
 }

@@ -49,6 +49,11 @@ public class IHome extends javax.swing.JPanel {
         add(Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, -1, 140));
 
         BuscarenCheckin.setText("Check-In");
+        BuscarenCheckin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BuscarenCheckinActionPerformed(evt);
+            }
+        });
         add(BuscarenCheckin, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, -1, 120));
 
         jButton3.setText("Check-Out");
@@ -109,6 +114,13 @@ public class IHome extends javax.swing.JPanel {
         this.setVisible(false);
         nueva.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void BuscarenCheckinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarenCheckinActionPerformed
+        // TODO add your handling code here:
+        ICheckin nueva=new ICheckin();
+        this.setVisible(false);
+        nueva.setVisible(true);
+    }//GEN-LAST:event_BuscarenCheckinActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

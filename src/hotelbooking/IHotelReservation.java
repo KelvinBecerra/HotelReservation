@@ -86,9 +86,9 @@ public class IHotelReservation extends javax.swing.JFrame {
             String mensaje = "Se obtuvo un error: " + e.getMessage();
             JOptionPane.showMessageDialog(null, mensaje);
         }
-        BuscarCI ventanaCI=new BuscarCI();
-        this.setVisible(false);
-        ventanaCI.setVisible(true);
+        //BuscarCI ventanaCI=new BuscarCI();
+        //this.setVisible(false);
+        //ventanaCI.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

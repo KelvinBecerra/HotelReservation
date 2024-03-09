@@ -63,7 +63,7 @@ public class IBienvenida extends javax.swing.JFrame {
         this.setVisible(false);
         IHome nuevaVentana=new IHome();
         nuevaVentana.setVisible(true);
-        
+        nuevaVentana.setLocationRelativeTo(null);
         //ventanaCI.setLocationRelativeTo(true);
         //u.setLocationRelativeTo(null);
     }//GEN-LAST:event_veropcionesActionPerformed

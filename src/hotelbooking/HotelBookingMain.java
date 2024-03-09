@@ -8,16 +8,16 @@ package hotelbooking;
  *
  * @author KelvinCi
  */
-public class HotelBooking {
+public class HotelBookingMain {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        IHome nuevo=new IHome();
+        IBienvenida nuevo=new IBienvenida();
         nuevo.setVisible(true);
-        
+        nuevo.setLocationRelativeTo(null);
         //nuevo.setLocationRelativeTo(null);
     }
     

@@ -8,12 +8,12 @@ package hotelbooking;
  *
  * @author KelvinCi
  */
-public class ICheckOut extends javax.swing.JFrame {
+public class IRegistro extends javax.swing.JFrame {
 
     /**
-     * Creates new form ICheckOut
+     * Creates new form IRegistro
      */
-    public ICheckOut() {
+    public IRegistro() {
         initComponents();
     }
 
@@ -26,17 +26,8 @@ public class ICheckOut extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, -1, -1));
-
-        jTextField1.setText("jTextField1");
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -44,10 +35,8 @@ public class ICheckOut extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-  
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

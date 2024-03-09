@@ -86,7 +86,9 @@ public class IHome extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.setVisible(false);
 
-        Buscar nuevoBuscar = new Buscar();
+        IBuscar nuevoBuscar = new IBuscar();
+        nuevoBuscar.setSize(550, 550);
+        nuevoBuscar.setLocationRelativeTo(null);
         nuevoBuscar.setVisible(true);
     }//GEN-LAST:event_BuscarActionPerformed
 

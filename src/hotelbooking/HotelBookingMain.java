@@ -4,6 +4,8 @@
  */
 package hotelbooking;
 
+import java.awt.Color;
+
 /**
  *
  * @author KelvinCi
@@ -17,8 +19,8 @@ public class HotelBookingMain {
         // TODO code application logic here
         IBienvenida nuevo=new IBienvenida();
         nuevo.setVisible(true);
+        nuevo.setSize(550,550);
         nuevo.setLocationRelativeTo(null);
-        //nuevo.setLocationRelativeTo(null);
     }
     
 }

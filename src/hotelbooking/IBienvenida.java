@@ -4,6 +4,7 @@
  */
 package hotelbooking;
 
+import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -49,11 +50,11 @@ public class IBienvenida extends javax.swing.JFrame {
                 veropcionesActionPerformed(evt);
             }
         });
-        getContentPane().add(veropciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
+        getContentPane().add(veropciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, 150, 70));
 
         jLabel1.setText("Bienvenido a MetroHotel");
         jLabel1.setMaximumSize(new java.awt.Dimension(50, 50));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, 160, 36));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 160, 36));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -64,8 +65,7 @@ public class IBienvenida extends javax.swing.JFrame {
         IHome nuevaVentana=new IHome();
         nuevaVentana.setVisible(true);
         nuevaVentana.setLocationRelativeTo(null);
-        //ventanaCI.setLocationRelativeTo(true);
-        //u.setLocationRelativeTo(null);
+        this.setForeground(Color.red);
     }//GEN-LAST:event_veropcionesActionPerformed
 
     /**

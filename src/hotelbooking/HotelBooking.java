@@ -15,8 +15,9 @@ public class HotelBooking {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        IHome nuevo=new IHome();
+        IBienvenida nuevo=new IBienvenida();
         nuevo.setVisible(true);
+        nuevo.setLocationRelativeTo(null);
     }
     
 }

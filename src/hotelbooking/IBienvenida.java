@@ -43,7 +43,7 @@ public class IBienvenida extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 41, -1, -1));
 
-        jButton1.setText("Busqueda de Archivo");
+        jButton1.setText("Ver opciones");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -60,7 +60,7 @@ public class IBienvenida extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        JFileChooser fc = new JFileChooser();//Abre el cuadro de dialogo para que el usuario seleccione los archivos 
+        /*JFileChooser fc = new JFileChooser();//Abre el cuadro de dialogo para que el usuario seleccione los archivos 
         fc.showOpenDialog(null);//Aqui se abre la ventana y se marca null para especificar que no tenga nada seleccionado
         File archivo = fc.getSelectedFile();//Almacena el archivo elegido por el usuario 
         //Se pasa a usar try-catch porque puede que marque algun error 
@@ -85,10 +85,13 @@ public class IBienvenida extends javax.swing.JFrame {
         } catch (IOException e) {
             String mensaje = "Se obtuvo un error: " + e.getMessage();
             JOptionPane.showMessageDialog(null, mensaje);
-        }
-        //BuscarCI ventanaCI=new BuscarCI();
-        //this.setVisible(false);
-        //ventanaCI.setVisible(true);
+        }*/
+        this.setVisible(false);
+        IHome ventanaCI=new IHome();
+        
+        ventanaCI.setVisible(true);
+        
+        //u.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

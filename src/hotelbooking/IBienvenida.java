@@ -34,7 +34,7 @@ public class IBienvenida extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        veropciones = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -43,30 +43,30 @@ public class IBienvenida extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 41, -1, -1));
 
-        jButton1.setText("Ver opciones");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        veropciones.setText("Ver opciones");
+        veropciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                veropcionesActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
+        getContentPane().add(veropciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
 
         jLabel1.setText("Bienvenido a MetroHotel");
         jLabel1.setMaximumSize(new java.awt.Dimension(50, 50));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, 140, 36));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, 160, 36));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
+    private void veropcionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_veropcionesActionPerformed
+        System.out.println("Boton 'ver opciones' presionado");
         this.setVisible(false);
-        IHome ventanaCI=new IHome();
+        IHome nuevaVentana=new IHome();
+        nuevaVentana.setVisible(true);
         
-        ventanaCI.setVisible(true);
-        
+        //ventanaCI.setLocationRelativeTo(true);
         //u.setLocationRelativeTo(null);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_veropcionesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -74,8 +74,8 @@ public class IBienvenida extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton veropciones;
     // End of variables declaration//GEN-END:variables
 }

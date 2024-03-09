@@ -89,36 +89,37 @@ public class IHome extends javax.swing.JPanel {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        ICheckOut nuevo=new ICheckOut();
+        ICheckOut nuevo = new ICheckOut();
         this.setVisible(false);
         nuevo.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
         // TODO add your handling code here:
-        Buscar nuevoBuscar=new Buscar();
+        Buscar nuevoBuscar = new Buscar();
         this.setVisible(false);
         nuevoBuscar.setVisible(true);
     }//GEN-LAST:event_BuscarActionPerformed
 
     private void registroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registroActionPerformed
         // TODO add your handling code here:
-        IRegistro nuevoRegistro=new IRegistro();
+        IRegistro nuevoRegistro = new IRegistro();
         this.setVisible(false);
         nuevoRegistro.setVisible(true);
     }//GEN-LAST:event_registroActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        IBienvenida nueva=new IBienvenida();
+        IBienvenida nueva = new IBienvenida();
         this.setVisible(false);
         nueva.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void BuscarenCheckinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarenCheckinActionPerformed
         // TODO add your handling code here:
-        ICheckin nueva=new ICheckin();
         this.setVisible(false);
+        ICheckin nueva = new ICheckin();
+
         nueva.setVisible(true);
     }//GEN-LAST:event_BuscarenCheckinActionPerformed
 

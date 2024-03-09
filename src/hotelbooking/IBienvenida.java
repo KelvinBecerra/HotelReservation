@@ -49,43 +49,17 @@ public class IBienvenida extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
 
         jLabel1.setText("Bienvenido a MetroHotel");
         jLabel1.setMaximumSize(new java.awt.Dimension(50, 50));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 140, 36));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, 140, 36));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        /*JFileChooser fc = new JFileChooser();//Abre el cuadro de dialogo para que el usuario seleccione los archivos 
-        fc.showOpenDialog(null);//Aqui se abre la ventana y se marca null para especificar que no tenga nada seleccionado
-        File archivo = fc.getSelectedFile();//Almacena el archivo elegido por el usuario 
-        //Se pasa a usar try-catch porque puede que marque algun error 
-        
-        try {
-            FileReader elquelee = new FileReader(archivo);//El encargado de leer los archivos
-            BufferedReader memoryspace = new BufferedReader(elquelee);//El bufferedReader se encarga de hacer un espacio de memoria
-            //para que la informacion que lea la tenga en la memoria y luego la presente donde se quiere mostrar
-            String texto = "";
-            String linea = "";
-            while (((linea = memoryspace.readLine()) != null)) {
-                texto += linea + "\n";
-            }
-            if (texto.isEmpty()) {
-                System.out.println("Archivo sin texto");
-                //textfiel.setText(texto);
-            } else {
-                System.out.println(texto);// o sustituir por una variable O EDDs
-                JOptionPane.showMessageDialog(null, "Archivo leído con éxito");
-            }
-
-        } catch (IOException e) {
-            String mensaje = "Se obtuvo un error: " + e.getMessage();
-            JOptionPane.showMessageDialog(null, mensaje);
-        }*/
+       
         this.setVisible(false);
         IHome ventanaCI=new IHome();
         

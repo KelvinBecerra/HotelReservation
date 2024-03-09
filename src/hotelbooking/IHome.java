@@ -15,6 +15,7 @@ public class IHome extends javax.swing.JFrame {
      */
     public IHome() {
         initComponents();
+        this.setSize(550, 550);
     }
 
     /**
@@ -34,6 +35,8 @@ public class IHome extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("HOME");
+        setPreferredSize(new java.awt.Dimension(550, 550));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Buscar.setText("Buscar");
@@ -42,7 +45,7 @@ public class IHome extends javax.swing.JFrame {
                 BuscarActionPerformed(evt);
             }
         });
-        getContentPane().add(Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, -1, 140));
+        getContentPane().add(Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, -1, 140));
 
         BuscarenCheckin.setText("Check-In");
         BuscarenCheckin.addActionListener(new java.awt.event.ActionListener() {
@@ -50,7 +53,7 @@ public class IHome extends javax.swing.JFrame {
                 BuscarenCheckinActionPerformed(evt);
             }
         });
-        getContentPane().add(BuscarenCheckin, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, -1, 140));
+        getContentPane().add(BuscarenCheckin, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, -1, 140));
 
         jButton3.setText("Check-Out");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -58,7 +61,7 @@ public class IHome extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 100, 120));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 100, 120));
 
         registro.setText("Registro");
         registro.addActionListener(new java.awt.event.ActionListener() {
@@ -66,10 +69,10 @@ public class IHome extends javax.swing.JFrame {
                 registroActionPerformed(evt);
             }
         });
-        getContentPane().add(registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, -1, 140));
+        getContentPane().add(registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, -1, 140));
 
         verhistorial.setText("Ver historial");
-        getContentPane().add(verhistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, -1, 120));
+        getContentPane().add(verhistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, 120));
 
         jButton1.setText("Atras");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -84,6 +87,8 @@ public class IHome extends javax.swing.JFrame {
 
     private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
         // TODO add your handling code here:
+        System.out.println("Presionaste el boton 'Buscar'");
+
         this.setVisible(false);
 
         IBuscar nuevoBuscar = new IBuscar();
@@ -94,41 +99,48 @@ public class IHome extends javax.swing.JFrame {
 
     private void BuscarenCheckinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarenCheckinActionPerformed
         // TODO add your handling code here:
+        System.out.println("Presionaste el boton 'Check-in'");
+
         this.setVisible(false);
         ICheckin nueva = new ICheckin();
-        nueva.setSize(550,550);
-        
+        nueva.setSize(550, 550);
+        nueva.setLocationRelativeTo(null);
         nueva.setVisible(true);
     }//GEN-LAST:event_BuscarenCheckinActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        System.out.println("Presionaste el boton 'Check-out'");
+
         this.setVisible(false);
 
         ICheckOut nuevo = new ICheckOut();
+        nuevo.setLocationRelativeTo(null);
         nuevo.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void registroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registroActionPerformed
         // TODO add your handling code here:
+        System.out.println("Presionaste el boton 'Registro'");
+
         this.setVisible(false);
 
-        IRegistro nuevoRegistro = new IRegistro();
-        nuevoRegistro.setVisible(true);
+        IRegistro nuevo = new IRegistro();
+        nuevo.setLocationRelativeTo(null);
+        nuevo.setVisible(true);
     }//GEN-LAST:event_registroActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
         IBienvenida nueva = new IBienvenida();
-
+        nueva.setLocationRelativeTo(null);
         nueva.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
-   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Buscar;

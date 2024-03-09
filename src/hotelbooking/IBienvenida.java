@@ -39,6 +39,8 @@ public class IBienvenida extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("BIENVENIDO");
+        setPreferredSize(new java.awt.Dimension(550, 550));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -60,7 +62,7 @@ public class IBienvenida extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void veropcionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_veropcionesActionPerformed
-        System.out.println("Boton 'ver opciones' presionado");
+        System.out.println("Presionaste el boton 'ver opciones'");
         this.setVisible(false);
         IHome nuevaVentana=new IHome();
         nuevaVentana.setVisible(true);

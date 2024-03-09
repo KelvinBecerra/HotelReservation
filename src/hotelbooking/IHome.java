@@ -96,7 +96,8 @@ public class IHome extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.setVisible(false);
         ICheckin nueva = new ICheckin();
-
+        nueva.setSize(550,550);
+        
         nueva.setVisible(true);
     }//GEN-LAST:event_BuscarenCheckinActionPerformed
 

@@ -4,6 +4,13 @@
  */
 package hotelbooking;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author KelvinCi
@@ -35,13 +42,13 @@ public class IHistorial extends javax.swing.JFrame {
         }
     }
 
-    //@Override
-    /*public void setVisible(boolean b) {
+    @Override
+    public void setVisible(boolean b) {
         super.setVisible(b);
         if (b) {
             afterShown();
         }
-    }*/
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -106,7 +113,16 @@ public class IHistorial extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_jToggleButton1ActionPerformed
-
+    /*public void mostrarArchivoExcel(File filename){
+        File archivo=new File("filename ");
+        try{
+            InputStream input=new FileInputStream(archivo);
+            XSSFWorkbook libro=new XSSFWorkbook(input);
+        }catch(FileNotFoundException e){
+            e.printStackTrace();
+        }
+        
+    }*/
     /**
      * @param args the command line arguments
      */

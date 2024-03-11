@@ -36,7 +36,6 @@ public class IHome extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("HOME");
-        setPreferredSize(new java.awt.Dimension(550, 550));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Buscar.setText("Buscar");
@@ -72,6 +71,11 @@ public class IHome extends javax.swing.JFrame {
         getContentPane().add(registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, -1, 140));
 
         verhistorial.setText("Ver historial");
+        verhistorial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                verhistorialActionPerformed(evt);
+            }
+        });
         getContentPane().add(verhistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, 120));
 
         jButton1.setText("Atras");
@@ -137,6 +141,14 @@ public class IHome extends javax.swing.JFrame {
         nueva.setLocationRelativeTo(null);
         nueva.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void verhistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verhistorialActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        IHistorial nueva=new IHistorial();
+        nueva.setLocationRelativeTo(null);
+        nueva.setVisible(true);
+    }//GEN-LAST:event_verhistorialActionPerformed
 
     /**
      * @param args the command line arguments

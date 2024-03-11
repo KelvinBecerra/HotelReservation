@@ -9,13 +9,39 @@ package hotelbooking;
  * @author KelvinCi
  */
 public class IHistorial extends javax.swing.JFrame {
+    private boolean mostrar;
 
+    public boolean isMostrar() {
+        return mostrar;
+    }
+
+    public void setMostrar(boolean mostrar) {
+        this.mostrar = mostrar;
+    }
     /**
      * Creates new form IHistorial
      */
     public IHistorial() {
+        
         initComponents();
     }
+    private void afterShown() {
+        if (mostrar) {
+            System.out.println("Si funciona el booleano");
+            mostrartex.setText("Hello world");
+            // Hacer lo que necesites hacer si mostrar es true
+        } else {
+            System.out.println("No funciono");
+        }
+    }
+
+    //@Override
+    /*public void setVisible(boolean b) {
+        super.setVisible(b);
+        if (b) {
+            afterShown();
+        }
+    }*/
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -26,10 +52,18 @@ public class IHistorial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jToggleButton1 = new javax.swing.JToggleButton();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        mostrartex = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
+
+        jToggleButton1.setText("jToggleButton1");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Historial");
@@ -39,9 +73,9 @@ public class IHistorial extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 40, -1, -1));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        mostrartex.setColumns(20);
+        mostrartex.setRows(5);
+        jScrollPane1.setViewportView(mostrartex);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, -1, 360));
 
@@ -61,21 +95,27 @@ public class IHistorial extends javax.swing.JFrame {
         System.out.println("Presionaste el boton 'HOME'");
 
         this.setVisible(false);
-        IHome nuevo=new IHome();
-        nuevo.setSize(550,550);
+        IHome nuevo = new IHome();
+        nuevo.setSize(550, 550);
         nuevo.setLocationRelativeTo(null);
+
         nuevo.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JTextArea mostrartex;
     // End of variables declaration//GEN-END:variables
 }

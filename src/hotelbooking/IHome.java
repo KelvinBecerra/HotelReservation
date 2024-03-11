@@ -17,6 +17,7 @@ public class IHome extends javax.swing.JFrame {
         initComponents();
         this.setSize(550, 550);
     }
+    boolean mostrarHistorial = false;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -145,9 +146,13 @@ public class IHome extends javax.swing.JFrame {
     private void verhistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verhistorialActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        IHistorial nueva=new IHistorial();
+        IHistorial nueva = new IHistorial();
         nueva.setLocationRelativeTo(null);
+        nueva.setMostrar(true);
+
         nueva.setVisible(true);
+
+
     }//GEN-LAST:event_verhistorialActionPerformed
 
     /**

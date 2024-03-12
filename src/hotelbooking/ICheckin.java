@@ -30,6 +30,7 @@ public class ICheckin extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Check-in");
@@ -51,6 +52,9 @@ public class ICheckin extends javax.swing.JFrame {
 
         jButton3.setText("Buscar");
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imags/azul.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -75,6 +79,7 @@ public class ICheckin extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

@@ -37,6 +37,7 @@ public class IBienvenida extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         veropciones = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("BIENVENIDO");
@@ -51,12 +52,15 @@ public class IBienvenida extends javax.swing.JFrame {
                 veropcionesActionPerformed(evt);
             }
         });
-        getContentPane().add(veropciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, 150, 70));
+        getContentPane().add(veropciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 150, 70));
 
         jLabel1.setText("Bienvenido a MetroHotel");
         jLabel1.setMaximumSize(new java.awt.Dimension(50, 50));
         jLabel1.setPreferredSize(new java.awt.Dimension(150, 30));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 160, 36));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, 160, 36));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imags/imagenhotel.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -77,6 +81,7 @@ public class IBienvenida extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton veropciones;
     // End of variables declaration//GEN-END:variables

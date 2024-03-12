@@ -13,6 +13,7 @@ public class IHome extends javax.swing.JFrame {
     /**
      * Creates new form IHomee
      */
+    
     public IHome() {
         initComponents();
         this.setSize(550, 550);
@@ -38,6 +39,7 @@ public class IHome extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("HOME");
+        setBackground(new java.awt.Color(0, 51, 255));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Buscar.setBackground(new java.awt.Color(255, 255, 102));
@@ -93,63 +95,19 @@ public class IHome extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 410, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imags/imagenhotel.png"))); // NOI18N
-        jLabel1.setPreferredSize(new java.awt.Dimension(550, 550));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-60, -10, 700, 480));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imags/azul.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 480));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
-        // TODO add your handling code here:
-        System.out.println("Presionaste el boton 'Buscar'");
-
-        this.setVisible(false);
-
-        IBuscar nuevoBuscar = new IBuscar();
-        nuevoBuscar.setSize(550, 550);
-        nuevoBuscar.setLocationRelativeTo(null);
-        nuevoBuscar.setVisible(true);
-    }//GEN-LAST:event_BuscarActionPerformed
-
-    private void BuscarenCheckinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarenCheckinActionPerformed
-        // TODO add your handling code here:
-        System.out.println("Presionaste el boton 'Check-in'");
-
-        this.setVisible(false);
-        ICheckin nueva = new ICheckin();
-        nueva.setSize(550, 550);
-        nueva.setLocationRelativeTo(null);
-        nueva.setVisible(true);
-    }//GEN-LAST:event_BuscarenCheckinActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        System.out.println("Presionaste el boton 'Check-out'");
-
-        this.setVisible(false);
-
-        ICheckOut nuevo = new ICheckOut();
-        nuevo.setLocationRelativeTo(null);
-        nuevo.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void registroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registroActionPerformed
-        // TODO add your handling code here:
-        System.out.println("Presionaste el boton 'Registro'");
-
-        this.setVisible(false);
-
-        IRegistro nuevo = new IRegistro();
-        nuevo.setLocationRelativeTo(null);
-        nuevo.setVisible(true);
-    }//GEN-LAST:event_registroActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
         IBienvenida nueva = new IBienvenida();
+        nueva.setSize(550,550);
         nueva.setLocationRelativeTo(null);
+
         nueva.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -162,8 +120,52 @@ public class IHome extends javax.swing.JFrame {
 
         nueva.setVisible(true);
 
-
     }//GEN-LAST:event_verhistorialActionPerformed
+
+    private void registroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registroActionPerformed
+        // TODO add your handling code here:
+        System.out.println("Presionaste el boton 'Registro'");
+
+        this.setVisible(false);
+
+        IRegistro nuevo = new IRegistro();
+        nuevo.setLocationRelativeTo(null);
+        nuevo.setVisible(true);
+    }//GEN-LAST:event_registroActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        System.out.println("Presionaste el boton 'Check-out'");
+
+        this.setVisible(false);
+
+        ICheckOut nuevo = new ICheckOut();
+        nuevo.setLocationRelativeTo(null);
+        nuevo.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void BuscarenCheckinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarenCheckinActionPerformed
+        // TODO add your handling code here:
+        System.out.println("Presionaste el boton 'Check-in'");
+
+        this.setVisible(false);
+        ICheckin nueva = new ICheckin();
+        nueva.setSize(550, 550);
+        nueva.setLocationRelativeTo(null);
+        nueva.setVisible(true);
+    }//GEN-LAST:event_BuscarenCheckinActionPerformed
+
+    private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
+        // TODO add your handling code here:
+        System.out.println("Presionaste el boton 'Buscar'");
+
+        this.setVisible(false);
+
+        IBuscar nuevoBuscar = new IBuscar();
+        nuevoBuscar.setSize(550, 550);
+        nuevoBuscar.setLocationRelativeTo(null);
+        nuevoBuscar.setVisible(true);
+    }//GEN-LAST:event_BuscarActionPerformed
 
     /**
      * @param args the command line arguments

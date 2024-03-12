@@ -64,6 +64,7 @@ public class IHistorial extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         mostrartex = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         jToggleButton1.setText("jToggleButton1");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -74,7 +75,6 @@ public class IHistorial extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Historial");
-        setPreferredSize(new java.awt.Dimension(550, 550));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -93,6 +93,9 @@ public class IHistorial extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, -1, 20));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imags/azul.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 550));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -129,6 +132,7 @@ public class IHistorial extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JToggleButton jToggleButton1;

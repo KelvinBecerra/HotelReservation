@@ -9,7 +9,15 @@ package hotelbooking;
  * @author KelvinCi
  */
 public class IHome extends javax.swing.JFrame {
+     private boolean mostrar;
 
+    public boolean isMostrar() {
+        return mostrar;
+    }
+
+    public void setMostrar(boolean mostrar) {
+        this.mostrar = mostrar;
+    }
     /**
      * Creates new form IHomee
      */
@@ -17,8 +25,26 @@ public class IHome extends javax.swing.JFrame {
     public IHome() {
         initComponents();
         this.setSize(550, 550);
+        this.setMostrar(true);
     }
-    boolean mostrarHistorial = false;
+    
+    private void afterShown() {
+        if (mostrar) {
+            System.out.println("Si funciona el booleano");
+            mostrartexto.setText("FUNCIONA");
+            // Hacer lo que necesites hacer si mostrar es true
+        } else {
+            System.out.println("No funciono");
+        }
+    }
+
+    @Override
+    public void setVisible(boolean b) {
+        super.setVisible(b);
+        if (b) {
+            afterShown();
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -35,57 +61,58 @@ public class IHome extends javax.swing.JFrame {
         registro = new javax.swing.JButton();
         verhistorial = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        mostrartex = new javax.swing.JLabel();
+        mostrartexto = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("HOME");
         setBackground(new java.awt.Color(0, 51, 255));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Buscar.setBackground(new java.awt.Color(255, 255, 102));
+        Buscar.setBackground(java.awt.Color.lightGray);
         Buscar.setText("Buscar");
         Buscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BuscarActionPerformed(evt);
             }
         });
-        getContentPane().add(Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, -1, 140));
+        getContentPane().add(Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, 140));
 
-        BuscarenCheckin.setBackground(new java.awt.Color(255, 255, 102));
+        BuscarenCheckin.setBackground(java.awt.Color.lightGray);
         BuscarenCheckin.setText("Check-In");
         BuscarenCheckin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BuscarenCheckinActionPerformed(evt);
             }
         });
-        getContentPane().add(BuscarenCheckin, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, -1, 140));
+        getContentPane().add(BuscarenCheckin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, -1, 140));
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 102));
+        jButton3.setBackground(java.awt.Color.lightGray);
         jButton3.setText("Check-Out");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 100, 120));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 100, 120));
 
-        registro.setBackground(new java.awt.Color(255, 255, 102));
+        registro.setBackground(java.awt.Color.lightGray);
         registro.setText("Registro");
         registro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 registroActionPerformed(evt);
             }
         });
-        getContentPane().add(registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, -1, 140));
+        getContentPane().add(registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, 140));
 
-        verhistorial.setBackground(new java.awt.Color(255, 255, 102));
+        verhistorial.setBackground(java.awt.Color.lightGray);
         verhistorial.setText("Ver historial");
         verhistorial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 verhistorialActionPerformed(evt);
             }
         });
-        getContentPane().add(verhistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, 120));
+        getContentPane().add(verhistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, -1, 120));
 
         jButton1.setText("Atras");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -95,8 +122,15 @@ public class IHome extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 410, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imags/azul.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 480));
+        mostrartex.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imags/azul.png"))); // NOI18N
+        getContentPane().add(mostrartex, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 480));
+
+        mostrartexto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mostrartextoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(mostrartexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, 270, 310));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -113,12 +147,10 @@ public class IHome extends javax.swing.JFrame {
 
     private void verhistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verhistorialActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-        IHistorial nueva = new IHistorial();
-        nueva.setLocationRelativeTo(null);
-        nueva.setMostrar(true);
+        
+        this.setMostrar(true);
 
-        nueva.setVisible(true);
+        
 
     }//GEN-LAST:event_verhistorialActionPerformed
 
@@ -167,6 +199,10 @@ public class IHome extends javax.swing.JFrame {
         nuevoBuscar.setVisible(true);
     }//GEN-LAST:event_BuscarActionPerformed
 
+    private void mostrartextoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrartextoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mostrartextoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -176,7 +212,8 @@ public class IHome extends javax.swing.JFrame {
     private javax.swing.JButton BuscarenCheckin;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel mostrartex;
+    private javax.swing.JTextField mostrartexto;
     private javax.swing.JButton registro;
     private javax.swing.JButton verhistorial;
     // End of variables declaration//GEN-END:variables

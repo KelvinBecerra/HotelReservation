@@ -35,7 +35,7 @@ public class IHistorial extends javax.swing.JFrame {
     private void afterShown() {
         if (mostrar) {
             System.out.println("Si funciona el booleano");
-            mostrartex.setText("Hello world");
+            mostrarte.setText("Hello world");
             // Hacer lo que necesites hacer si mostrar es true
         } else {
             System.out.println("No funciono");
@@ -62,7 +62,7 @@ public class IHistorial extends javax.swing.JFrame {
         jToggleButton1 = new javax.swing.JToggleButton();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        mostrartex = new javax.swing.JTextArea();
+        mostrarte = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -80,11 +80,11 @@ public class IHistorial extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 40, -1, -1));
 
-        mostrartex.setColumns(20);
-        mostrartex.setRows(5);
-        jScrollPane1.setViewportView(mostrartex);
+        mostrarte.setColumns(20);
+        mostrarte.setRows(5);
+        jScrollPane1.setViewportView(mostrarte);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, -1, 360));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(104, 80, 350, 390));
 
         jButton1.setText("HOME");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -136,6 +136,6 @@ public class IHistorial extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JTextArea mostrartex;
+    private javax.swing.JTextArea mostrarte;
     // End of variables declaration//GEN-END:variables
 }

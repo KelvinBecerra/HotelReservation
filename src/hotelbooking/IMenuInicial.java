@@ -271,7 +271,7 @@ public class IMenuInicial extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        MenuReserva mr = new MenuReserva(clientes, reservas, habs);
+        IMenuReserva mr = new IMenuReserva(clientes, reservas, habs);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 

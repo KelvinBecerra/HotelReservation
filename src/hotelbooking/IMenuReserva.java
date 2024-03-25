@@ -11,14 +11,14 @@ import hotelbooking.IMenuInicial;
  */
 
 
-public class MenuReserva extends javax.swing.JFrame {
+public class IMenuReserva extends javax.swing.JFrame {
     public static HashClientes clientes;
     public static ArbolReserva reservas;
     public static ArregloHabitaciones habs;
     /**
      * Creates new form MenuReserva
      */
-    public MenuReserva(HashClientes h, ArbolReserva ar, ArregloHabitaciones ah) {
+    public IMenuReserva(HashClientes h, ArbolReserva ar, ArregloHabitaciones ah) {
         initComponents();
         this.clientes = h;
         this.reservas = ar;

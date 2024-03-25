@@ -4,7 +4,7 @@
  */
 package hotelbooking;
 
-import proyecto2kelvin.NodoHistorial;
+import hotelbooking.NodoHistorial;
 
 public class ArbolHistorial {
 

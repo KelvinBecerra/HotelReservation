@@ -4,14 +4,14 @@
  */
 package hotelbooking;
 
-public class MenuClientes extends javax.swing.JFrame {
+public class IMenuClientes extends javax.swing.JFrame {
     public static HashClientes clientes;
     public static ArbolReserva reservas;
     public static ArregloHabitaciones habs;
     /**
      * Creates new form MenuClientes
      */
-    public MenuClientes(HashClientes h, ArbolReserva ar, ArregloHabitaciones ah) {
+    public IMenuClientes(HashClientes h, ArbolReserva ar, ArregloHabitaciones ah) {
         
         initComponents();
         this.clientes = h;

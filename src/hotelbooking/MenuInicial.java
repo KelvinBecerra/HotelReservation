@@ -265,7 +265,7 @@ public class MenuInicial extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        MenuClientes mc = new MenuClientes(clientes, reservas, habs);
+        IMenuClientes mc = new IMenuClientes(clientes, reservas, habs);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -277,19 +277,19 @@ public class MenuInicial extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        MenuHistorialHabitacion mhh = new MenuHistorialHabitacion(clientes, reservas, habs);
+        IMenuHistorialHabitacion mhh = new IMenuHistorialHabitacion(clientes, reservas, habs);
         this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        MenuCheckIn mci = new MenuCheckIn(clientes, reservas, habs);
+        IMenuCheckIn mci = new IMenuCheckIn(clientes, reservas, habs);
         this.dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        MenuCheckOut mco = new MenuCheckOut(clientes, reservas, habs);
+        IMenuCheckOut mco = new IMenuCheckOut(clientes, reservas, habs);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 

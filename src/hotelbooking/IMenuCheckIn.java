@@ -5,7 +5,7 @@
 package hotelbooking;
 
 
-public class MenuCheckIn extends javax.swing.JFrame {
+public class IMenuCheckIn extends javax.swing.JFrame {
     public Funciones_Hotel funciones;
     public static HashClientes clientes;
     public static ArbolReserva reservas;
@@ -13,7 +13,7 @@ public class MenuCheckIn extends javax.swing.JFrame {
     /**
      * Creates new form MenuCheckIn
      */
-    public MenuCheckIn(HashClientes h, ArbolReserva ar, ArregloHabitaciones ah) {
+    public IMenuCheckIn(HashClientes h, ArbolReserva ar, ArregloHabitaciones ah) {
         initComponents();
         this.clientes = h;
         this.reservas = ar;

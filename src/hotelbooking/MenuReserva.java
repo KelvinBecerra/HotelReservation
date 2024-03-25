@@ -1,8 +1,8 @@
 package hotelbooking;
 
-import proyecto2kelvin.HashClientes;
-import proyecto2kelvin.MenuInicial;
-import proyecto2kelvin.MenuInicial;
+import hotelbooking.HashClientes;
+import hotelbooking.MenuInicial;
+import hotelbooking.MenuInicial;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license

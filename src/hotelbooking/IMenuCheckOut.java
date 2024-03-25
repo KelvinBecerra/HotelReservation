@@ -110,7 +110,7 @@ public class IMenuCheckOut extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
-        MenuInicial menu = new MenuInicial(clientes, reservas, habs);
+        IMenuInicial menu = new IMenuInicial(clientes, reservas, habs);
         this.dispose();
     }                                        
 

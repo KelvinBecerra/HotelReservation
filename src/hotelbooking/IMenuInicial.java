@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class MenuInicial extends javax.swing.JFrame {
+public class IMenuInicial extends javax.swing.JFrame {
 
     public static HashClientes clientes;
     public static ArbolReserva reservas;
@@ -20,7 +20,7 @@ public class MenuInicial extends javax.swing.JFrame {
     /**
      * Creates new form MenuInicial
      */
-    public MenuInicial(HashClientes h, ArbolReserva ar, ArregloHabitaciones ah) {
+    public IMenuInicial(HashClientes h, ArbolReserva ar, ArregloHabitaciones ah) {
         initComponents();
         clientes = h;
         reservas = ar;
@@ -43,7 +43,7 @@ public class MenuInicial extends javax.swing.JFrame {
             try {
                 header = reader.readNext();
             } catch (CsvValidationException ex) {
-                Logger.getLogger(MenuInicial.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(IMenuInicial.class.getName()).log(Level.SEVERE, null, ex);
             }
             if (header == null || header.length != 9) {
                 throw new IOException("Invalid CSV format");
@@ -59,7 +59,7 @@ public class MenuInicial extends javax.swing.JFrame {
                     nodes.CrearReservacion(Integer.parseInt(ci), values[1], values[2], values[3], values[4], values[5], values[6], values[7], values[8]);
                 }
             } catch (CsvValidationException ex) {
-                Logger.getLogger(MenuInicial.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(IMenuInicial.class.getName()).log(Level.SEVERE, null, ex);
             }
         } catch (IOException e) {
             System.err.println("Error reading CSV file: " + e.getMessage());
@@ -76,7 +76,7 @@ public class MenuInicial extends javax.swing.JFrame {
             try {
                 header = reader.readNext();
             } catch (CsvValidationException ex) {
-                Logger.getLogger(MenuInicial.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(IMenuInicial.class.getName()).log(Level.SEVERE, null, ex);
             }
             if (header == null || header.length != 3) {
                 throw new IOException("Invalid CSV format");
@@ -91,7 +91,7 @@ public class MenuInicial extends javax.swing.JFrame {
                     nodes.insertarHab(Integer.parseInt(values[0]), Integer.parseInt(values[2]), values[1]);
                 }
             } catch (CsvValidationException ex) {
-                Logger.getLogger(MenuInicial.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(IMenuInicial.class.getName()).log(Level.SEVERE, null, ex);
             }
         } catch (IOException e) {
             System.err.println("Error reading CSV file: " + e.getMessage());
@@ -107,7 +107,7 @@ public class MenuInicial extends javax.swing.JFrame {
             try {
                 header = reader.readNext();
             } catch (CsvValidationException ex) {
-                Logger.getLogger(MenuInicial.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(IMenuInicial.class.getName()).log(Level.SEVERE, null, ex);
             }
             if (header == null || header.length != 7) {
                 throw new IOException("Invalid CSV format");
@@ -145,7 +145,7 @@ public class MenuInicial extends javax.swing.JFrame {
 
                 }
             } catch (CsvValidationException ex) {
-                Logger.getLogger(MenuInicial.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(IMenuInicial.class.getName()).log(Level.SEVERE, null, ex);
             }
         } catch (IOException e) {
             System.err.println("Error reading CSV file: " + e.getMessage());
@@ -161,7 +161,7 @@ public class MenuInicial extends javax.swing.JFrame {
             try {
                 header = reader.readNext();
             } catch (CsvValidationException ex) {
-                Logger.getLogger(MenuInicial.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(IMenuInicial.class.getName()).log(Level.SEVERE, null, ex);
             }
             if (header == null || header.length != 7) {
                 throw new IOException("Invalid CSV format");
@@ -177,7 +177,7 @@ public class MenuInicial extends javax.swing.JFrame {
                     nodes.agregarHistorial(Integer.parseInt(values[6]), values[1], values[2], values[3], values[4], values[5], Integer.parseInt(ci));
                 }
             } catch (CsvValidationException ex) {
-                Logger.getLogger(MenuInicial.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(IMenuInicial.class.getName()).log(Level.SEVERE, null, ex);
             }
         } catch (IOException e) {
             System.err.println("Error reading CSV file: " + e.getMessage());
@@ -310,21 +310,23 @@ public class MenuInicial extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IMenuInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IMenuInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IMenuInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(IMenuInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MenuInicial(clientes, reservas, habs).setVisible(true);
+                new IMenuInicial(clientes, reservas, habs).setVisible(true);
             }
         });
     }

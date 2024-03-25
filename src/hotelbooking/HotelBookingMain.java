@@ -17,7 +17,7 @@ public class HotelBookingMain {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        MenuInicial mi = new MenuInicial(null, null,null);
+        IMenuInicial mi = new IMenuInicial(null, null,null);
         mi.setVisible(true);
         
         /*IBienvenida nuevo=new IBienvenida();

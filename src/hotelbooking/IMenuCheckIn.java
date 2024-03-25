@@ -98,7 +98,7 @@ public class IMenuCheckIn extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        MenuInicial menu = new MenuInicial(clientes, reservas, habs);
+        IMenuInicial menu = new IMenuInicial(clientes, reservas, habs);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 

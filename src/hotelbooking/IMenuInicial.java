@@ -274,7 +274,7 @@ public class IMenuInicial extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         IMenuReserva mr = new IMenuReserva(clientes, reservas, habs);
-        
+        mr.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 

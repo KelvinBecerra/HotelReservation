@@ -37,7 +37,7 @@ public class IMenuInicial extends javax.swing.JFrame {
 
     public static ArbolReserva readHabsReservasFromCSV(String filePath) {
         ArbolReserva nodes = new ArbolReserva();
-        try ( CSVReader reader = new CSVReader(new FileReader(filePath))) {
+        try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             // Read the header line
             String[] header = null;
             try {
@@ -70,7 +70,7 @@ public class IMenuInicial extends javax.swing.JFrame {
 
     public static ArregloHabitaciones readHabsFromCSV(String filePath) {
         ArregloHabitaciones nodes = new ArregloHabitaciones();
-        try ( CSVReader reader = new CSVReader(new FileReader(filePath))) {
+        try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             // Read the header line
             String[] header = null;
             try {
@@ -101,7 +101,7 @@ public class IMenuInicial extends javax.swing.JFrame {
 
     public static HashClientes readClientesFromCSV(String filePath) {
         HashClientes nodes = new HashClientes();
-        try ( CSVReader reader = new CSVReader(new FileReader(filePath))) {
+        try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             // Read the header line
             String[] header = null;
             try {
@@ -155,7 +155,7 @@ public class IMenuInicial extends javax.swing.JFrame {
 
     public static ArregloHabitaciones readHistorialFromCSV(String filePath) {
         ArregloHabitaciones nodes = habs;
-        try ( CSVReader reader = new CSVReader(new FileReader(filePath))) {
+        try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             // Read the header line
             String[] header = null;
             try {
@@ -281,6 +281,8 @@ public class IMenuInicial extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         IMenuHistorialHabitacion mhh = new IMenuHistorialHabitacion(clientes, reservas, habs);
+        mhh.setLocationRelativeTo(null);
+
         this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -296,8 +298,6 @@ public class IMenuInicial extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

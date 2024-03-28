@@ -5,14 +5,16 @@
 package hotelbooking;
 
 public class IMenuClientes extends javax.swing.JFrame {
+
     public static HashClientes clientes;
     public static ArbolReserva reservas;
     public static ArregloHabitaciones habs;
+
     /**
      * Creates new form MenuClientes
      */
     public IMenuClientes(HashClientes h, ArbolReserva ar, ArregloHabitaciones ah) {
-        
+
         initComponents();
         this.clientes = h;
         this.reservas = ar;
@@ -102,14 +104,16 @@ public class IMenuClientes extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         IMenuInicial menu = new IMenuInicial(clientes, reservas, habs);
+        menu.setLocationRelativeTo(null);
+
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        try{
+        try {
             this.jTextArea1.setText(clientes.imprimir(this.nombre.getText().toLowerCase(), this.apellido.getText().toLowerCase()));
-        }catch(Exception e){
+        } catch (Exception e) {
             this.jTextArea1.setText("INGRESE UN NOMBRE Y APELLIDO VÁLIDOS");
         }
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -117,7 +121,6 @@ public class IMenuClientes extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField apellido;

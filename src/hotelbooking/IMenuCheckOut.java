@@ -111,6 +111,7 @@ public class IMenuCheckOut extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
         IMenuInicial menu = new IMenuInicial(clientes, reservas, habs);
+        menu.setLocationRelativeTo(null);
         this.dispose();
     }                                        
 

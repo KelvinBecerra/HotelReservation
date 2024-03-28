@@ -9,12 +9,12 @@ import hotelbooking.IMenuInicial;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
-
 public class IMenuReserva extends javax.swing.JFrame {
+
     public static HashClientes clientes;
     public static ArbolReserva reservas;
     public static ArregloHabitaciones habs;
+
     /**
      * Creates new form MenuReserva
      */
@@ -103,14 +103,16 @@ public class IMenuReserva extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         IMenuInicial menu = new IMenuInicial(clientes, reservas, habs);
+        menu.setLocationRelativeTo(null);
+
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        try{
+        try {
             this.jTextArea1.setText(reservas.BuscarReservacion(Integer.parseInt(this.cedula.getText().replace(".", ""))).toString());
-        }catch(Exception e){
+        } catch (Exception e) {
             this.jTextArea1.setText("INGRESE UN NOMBRE Y APELLIDO VÁLIDOS");
         }
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -118,7 +120,6 @@ public class IMenuReserva extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField cedula;

@@ -4,17 +4,26 @@
  */
 package hotelbooking;
 
+import java.awt.Color;
+
 /**
  *
  * @author KelvinCi
  */
-public class HotelBooking {
+public class HotelBookingMain {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        IMenuInicial mi = new IMenuInicial(null, null,null);
+        mi.setVisible(true);
+        
+        /*IBienvenida nuevo=new IBienvenida();
+        nuevo.setVisible(true);
+        nuevo.setSize(550,550);
+        nuevo.setLocationRelativeTo(null);*/
     }
     
 }

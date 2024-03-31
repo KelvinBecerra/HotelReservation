@@ -4,12 +4,13 @@
  */
 package hotelbooking;
 
-
 public class IMenuCheckIn extends javax.swing.JFrame {
+
     public Funciones_Hotel funciones;
     public static HashClientes clientes;
     public static ArbolReserva reservas;
     public static ArregloHabitaciones habs;
+
     /**
      * Creates new form MenuCheckIn
      */
@@ -99,14 +100,16 @@ public class IMenuCheckIn extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         IMenuInicial menu = new IMenuInicial(clientes, reservas, habs);
+        menu.setLocationRelativeTo(null);
+
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        try{
+        try {
             this.jTextArea1.setText(funciones.Check_in(Integer.parseInt(this.nroHab.getText().replace(".", ""))));
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
             this.jTextArea1.setText("INGRESE UNA CÉDULA VÁLIDA");
         }
@@ -115,7 +118,6 @@ public class IMenuCheckIn extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;

@@ -37,7 +37,7 @@ public class IMenuInicial extends javax.swing.JFrame {
 
     public static ArbolReserva readHabsReservasFromCSV(String filePath) {
         ArbolReserva nodes = new ArbolReserva();
-        try ( CSVReader reader = new CSVReader(new FileReader(filePath))) {
+        try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             // Read the header line
             String[] header = null;
             try {
@@ -70,7 +70,7 @@ public class IMenuInicial extends javax.swing.JFrame {
 
     public static ArregloHabitaciones readHabsFromCSV(String filePath) {
         ArregloHabitaciones nodes = new ArregloHabitaciones();
-        try ( CSVReader reader = new CSVReader(new FileReader(filePath))) {
+        try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             // Read the header line
             String[] header = null;
             try {
@@ -101,7 +101,7 @@ public class IMenuInicial extends javax.swing.JFrame {
 
     public static HashClientes readClientesFromCSV(String filePath) {
         HashClientes nodes = new HashClientes();
-        try ( CSVReader reader = new CSVReader(new FileReader(filePath))) {
+        try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             // Read the header line
             String[] header = null;
             try {
@@ -155,7 +155,7 @@ public class IMenuInicial extends javax.swing.JFrame {
 
     public static ArregloHabitaciones readHistorialFromCSV(String filePath) {
         ArregloHabitaciones nodes = habs;
-        try ( CSVReader reader = new CSVReader(new FileReader(filePath))) {
+        try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             // Read the header line
             String[] header = null;
             try {
@@ -267,70 +267,41 @@ public class IMenuInicial extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         IMenuClientes mc = new IMenuClientes(clientes, reservas, habs);
+        mc.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         IMenuReserva mr = new IMenuReserva(clientes, reservas, habs);
+        mr.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         IMenuHistorialHabitacion mhh = new IMenuHistorialHabitacion(clientes, reservas, habs);
+        mhh.setLocationRelativeTo(null);
+
         this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         IMenuCheckIn mci = new IMenuCheckIn(clientes, reservas, habs);
+        mci.setLocationRelativeTo(null);
+
         this.dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         IMenuCheckOut mco = new IMenuCheckOut(clientes, reservas, habs);
+        mco.setLocationRelativeTo(null);
+
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(IMenuInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(IMenuInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(IMenuInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(IMenuInicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new IMenuInicial(clientes, reservas, habs).setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

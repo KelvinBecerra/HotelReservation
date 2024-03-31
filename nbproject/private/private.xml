@@ -2,6 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/lenovo/OneDrive/Documentos/NetBeansProjects/HotelBooking/src/hotelbooking/IMenuClientes.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Documentos/NetBeansProjects/HotelBooking/src/hotelbooking/IMenuInicial.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Documentos/NetBeansProjects/HotelBooking/src/hotelbooking/HotelBookingMain.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Documentos/NetBeansProjects/HotelBooking/src/hotelbooking/IMenuCheckIn.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Documentos/NetBeansProjects/HotelBooking/src/hotelbooking/IMenuCheckOut.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Documentos/NetBeansProjects/HotelBooking/src/hotelbooking/IMenuReserva.java</file>
+            <file>file:/C:/Users/lenovo/OneDrive/Documentos/NetBeansProjects/HotelBooking/src/hotelbooking/IMenuHistorialHabitacion.java</file>
+        </group>
     </open-files>
 </project-private>

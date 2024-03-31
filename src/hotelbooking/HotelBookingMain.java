@@ -18,6 +18,7 @@ public class HotelBookingMain {
     public static void main(String[] args) {
         // TODO code application logic here
         IMenuInicial mi = new IMenuInicial(null, null,null);
+        mi.setLocationRelativeTo(null);
         mi.setVisible(true);
         
         /*IBienvenida nuevo=new IBienvenida();

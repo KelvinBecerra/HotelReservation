@@ -39,11 +39,11 @@ public class ArbolReserva {
             }
         }
     }
-
+    
     public NodoReserva BuscarReservacion(int ci) {
         return this.buscar(ci, root);
     }
-
+    ///busqueda de reservacion
     private NodoReserva buscar(int ci, NodoReserva reservaActual) {
         if (reservaActual != null) {
             NodoReserva buscar = null;

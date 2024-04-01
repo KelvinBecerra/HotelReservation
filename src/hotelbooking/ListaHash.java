@@ -12,7 +12,7 @@ public class ListaHash {
     public ListaHash() {
         this.primero = null;
     }
-
+        /// esto es para insertar usuarios en el hast table
     public void insertar(String nombre, String apellido, String email, String genero, String celular, String llegada, int numeroHab) {
         NodoHash nuevo = new NodoHash(nombre, apellido, email, genero, celular, llegada, numeroHab);
         if (this.primero == null) {

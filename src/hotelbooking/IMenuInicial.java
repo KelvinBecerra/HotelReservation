@@ -30,13 +30,13 @@ public class IMenuInicial extends javax.swing.JFrame {
             habs = readHabsFromCSV("habitaciones.csv");
             habs = readHistorialFromCSV("historico.csv");
             clientes = this.readClientesFromCSV("estado.csv");
-
+            ///aqui simplemente llamamos a cada uno de los hash para inicializar 
         }
         this.setVisible(true);
     }
 
     public static ArbolReserva readHabsReservasFromCSV(String filePath) {
-        ArbolReserva nodes = new ArbolReserva();
+        ArbolReserva nodes = new ArbolReserva(); /// nodes es una variable que solo definimos aqui
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             // Read the header line
             String[] header = null;
@@ -45,7 +45,7 @@ public class IMenuInicial extends javax.swing.JFrame {
             } catch (CsvValidationException ex) {
                 Logger.getLogger(IMenuInicial.class.getName()).log(Level.SEVERE, null, ex);
             }
-            if (header == null || header.length != 9) {
+            if (header == null || header.length != 9) {/// simplemente aqui testeamos que el dato sea correcto
                 throw new IOException("Invalid CSV format");
             }
 
@@ -69,7 +69,7 @@ public class IMenuInicial extends javax.swing.JFrame {
     }
 
     public static ArregloHabitaciones readHabsFromCSV(String filePath) {
-        ArregloHabitaciones nodes = new ArregloHabitaciones();
+        ArregloHabitaciones nodes = new ArregloHabitaciones();/// nodes otra vez solo se inicializa aqui
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             // Read the header line
             String[] header = null;
@@ -265,8 +265,8 @@ public class IMenuInicial extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        IMenuClientes mc = new IMenuClientes(clientes, reservas, habs);
+        // TODO add your handling code here: 
+        IMenuClientes mc = new IMenuClientes(clientes, reservas, habs);/// boton huespedes lleva a menu cliente
         mc.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -288,7 +288,7 @@ public class IMenuInicial extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        IMenuCheckIn mci = new IMenuCheckIn(clientes, reservas, habs);
+        IMenuCheckIn mci = new IMenuCheckIn(clientes, reservas, habs);///boton checkin para acceder a menu del chekin
         mci.setLocationRelativeTo(null);
 
         this.dispose();

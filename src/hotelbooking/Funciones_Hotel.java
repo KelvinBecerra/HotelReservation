@@ -18,9 +18,9 @@ public class Funciones_Hotel {
     
     public String Check_in(int ci) {
         NodoReserva reserva = bdd_reservaciones.BuscarReservacion(ci);
-        if (reserva != null) {
+        if (reserva != null) {/// es un simple algoritmo de busqueda para el checkin
             NodoHabitacion habitacion = bdd_habitaciones.asignarHab(reserva.getTipo_hab());
-            if (habitacion != null) {
+            if (habitacion != null) {/// es un simple algoritmo de busqueda para el checkin cual tomara como comnotacion para eliminar la reserva ya que esta llegando
                 habitacion.setOcupada(true);
                 this.bdd_clientes.Insertar( reserva.getPrimer_nombre(), reserva.getSegundo_nombre(), reserva.getEmail(), reserva.getGenero(), reserva.getCelular(), reserva.getFecha_llegada(), habitacion.getNumero_hab());
                 this.bdd_reservaciones.EliminarReservacion(ci);
@@ -36,11 +36,9 @@ public class Funciones_Hotel {
     public String Check_out(String nombre, String apellido, int ci) {
         NodoHash cliente = bdd_clientes.Buscar(nombre, apellido);
         System.out.println(cliente);
-        if (cliente != null) {
-            System.out.println("joya");
+        if (cliente != null) { /// algoritmo de busqueda para el check out  
             NodoHabitacion habitacion = this.bdd_habitaciones.habitaciones[cliente.getNum_hab()-1];
-            if (habitacion != null) {
-                System.out.println("tn");
+            if (habitacion != null) {;/// aqui agregamos el estatus de vacia a la habitacion
                 habitacion.setOcupada(false);
                 bdd_habitaciones.agregarHistorial(habitacion.getNumero_hab(), nombre, apellido, cliente.getEmail(), cliente.getGenero(), cliente.getLlegada(), ci);
                 bdd_clientes.Eliminar(nombre, apellido);

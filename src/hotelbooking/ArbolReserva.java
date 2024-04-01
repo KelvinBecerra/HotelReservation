@@ -58,7 +58,7 @@ public class ArbolReserva {
         }
         return null;
     }
-
+    ///imprimir las reservaciones
     public String imprimir(NodoReserva reservaActual, String txt) {
         if (reservaActual != null) {
             txt = this.imprimir(reservaActual.getHijoIzquierdo(), txt);

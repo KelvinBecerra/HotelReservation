@@ -45,7 +45,7 @@ public class IMenuInicial extends javax.swing.JFrame {
             } catch (CsvValidationException ex) {
                 Logger.getLogger(IMenuInicial.class.getName()).log(Level.SEVERE, null, ex);
             }
-            if (header == null || header.length != 9) {
+            if (header == null || header.length != 9) {/// simplemente aqui testeamos que el dato sea correcto
                 throw new IOException("Invalid CSV format");
             }
 

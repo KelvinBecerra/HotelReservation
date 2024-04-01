@@ -11,7 +11,7 @@ public class ArbolReserva {
     public ArbolReserva() {
         root = null;
     }
-
+    ///creacion de la reservacion
     public void CrearReservacion(int ci, String primer_nombre, String segundo_nombre, String email, String genero, String tipo_hab, String celular, String fecha_llegada, String fecha_salida) {
         NodoReserva nueva = new NodoReserva(ci, primer_nombre, segundo_nombre, email, genero, tipo_hab, celular, fecha_llegada, fecha_salida);
         if (this.root != null) {

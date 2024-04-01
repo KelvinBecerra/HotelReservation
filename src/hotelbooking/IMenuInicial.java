@@ -296,7 +296,7 @@ public class IMenuInicial extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        IMenuCheckOut mco = new IMenuCheckOut(clientes, reservas, habs);
+        IMenuCheckOut mco = new IMenuCheckOut(clientes, reservas, habs);/// boton check out para acceder a menu del check out
         mco.setLocationRelativeTo(null);
 
         this.dispose();

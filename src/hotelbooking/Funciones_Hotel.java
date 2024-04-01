@@ -36,11 +36,9 @@ public class Funciones_Hotel {
     public String Check_out(String nombre, String apellido, int ci) {
         NodoHash cliente = bdd_clientes.Buscar(nombre, apellido);
         System.out.println(cliente);
-        if (cliente != null) {
-            System.out.println("joya");
+        if (cliente != null) { /// algoritmo de busqueda para el check out  
             NodoHabitacion habitacion = this.bdd_habitaciones.habitaciones[cliente.getNum_hab()-1];
-            if (habitacion != null) {
-                System.out.println("tn");
+            if (habitacion != null) {;/// aqui agregamos el estatus de vacia a la habitacion
                 habitacion.setOcupada(false);
                 bdd_habitaciones.agregarHistorial(habitacion.getNumero_hab(), nombre, apellido, cliente.getEmail(), cliente.getGenero(), cliente.getLlegada(), ci);
                 bdd_clientes.Eliminar(nombre, apellido);

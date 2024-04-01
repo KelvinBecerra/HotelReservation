@@ -68,7 +68,7 @@ public class IMenuInicial extends javax.swing.JFrame {
         return nodes;
     }
 
-    public static ArregloHabitaciones readHabsFromCSV(String filePath) {
+    public static ArregloHabitaciones readHabsFromCSV(String filePath) {/// simplemente lo que se hace es leer cada linea y agg al arbol de las habitaciones
         ArregloHabitaciones nodes = new ArregloHabitaciones();/// nodes otra vez solo se inicializa aqui
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             // Read the header line

@@ -22,7 +22,7 @@ public class ArbolHistorial {
             this.insertar(nuevo, this.raiz);
         }
     }
-
+    ///insertar en el arbol del historial
     private void insertar(NodoHistorial nueva, NodoHistorial padre) {
         if (padre != null) {
             if (padre.getCi() >= nueva.getCi()) {

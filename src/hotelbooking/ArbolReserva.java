@@ -21,7 +21,7 @@ public class ArbolReserva {
             this.root = nueva;
         }
     }
-
+    ///insertar una reservacion
     private void insertar(NodoReserva nueva, NodoReserva reservaActual) {
         if (reservaActual != null) {
             if (reservaActual.getCi() >= nueva.getCi()) {

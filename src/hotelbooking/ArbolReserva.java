@@ -73,7 +73,7 @@ public class ArbolReserva {
         this.root = eliminar(this.root, ci);
         System.out.println(this.BuscarReservacion(ci));
     }
-
+    /// eliminar reservacion balanceando el arbol
     private NodoReserva eliminar(NodoReserva reservaActual, int ci) {
         if (reservaActual == null) {
             return null;

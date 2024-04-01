@@ -18,9 +18,9 @@ public class Funciones_Hotel {
     
     public String Check_in(int ci) {
         NodoReserva reserva = bdd_reservaciones.BuscarReservacion(ci);
-        if (reserva != null) {
+        if (reserva != null) {/// es un simple algoritmo de busqueda para el checkin
             NodoHabitacion habitacion = bdd_habitaciones.asignarHab(reserva.getTipo_hab());
-            if (habitacion != null) {
+            if (habitacion != null) {/// es un simple algoritmo de busqueda para el checkin cual tomara como comnotacion para eliminar la reserva ya que esta llegando
                 habitacion.setOcupada(true);
                 this.bdd_clientes.Insertar( reserva.getPrimer_nombre(), reserva.getSegundo_nombre(), reserva.getEmail(), reserva.getGenero(), reserva.getCelular(), reserva.getFecha_llegada(), habitacion.getNumero_hab());
                 this.bdd_reservaciones.EliminarReservacion(ci);

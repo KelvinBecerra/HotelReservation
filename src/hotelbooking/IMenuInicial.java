@@ -35,7 +35,7 @@ public class IMenuInicial extends javax.swing.JFrame {
         this.setVisible(true);
     }
 
-    public static ArbolReserva readHabsReservasFromCSV(String filePath) {
+    public static ArbolReserva readHabsReservasFromCSV(String filePath) {/// simplemente lo que se hace es leer cada linea y agg al arbol de las reservas
         ArbolReserva nodes = new ArbolReserva(); /// nodes es una variable que solo definimos aqui
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             // Read the header line

@@ -30,13 +30,13 @@ public class IMenuInicial extends javax.swing.JFrame {
             habs = readHabsFromCSV("habitaciones.csv");
             habs = readHistorialFromCSV("historico.csv");
             clientes = this.readClientesFromCSV("estado.csv");
-
+            ///aqui simplemente llamamos a cada uno de los hash para inicializar 
         }
         this.setVisible(true);
     }
 
     public static ArbolReserva readHabsReservasFromCSV(String filePath) {
-        ArbolReserva nodes = new ArbolReserva();
+        ArbolReserva nodes = new ArbolReserva(); /// nodes es una variable que solo definimos aqui
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             // Read the header line
             String[] header = null;
@@ -288,7 +288,7 @@ public class IMenuInicial extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        IMenuCheckIn mci = new IMenuCheckIn(clientes, reservas, habs);
+        IMenuCheckIn mci = new IMenuCheckIn(clientes, reservas, habs);///boton checkin para acceder a menu del chekin
         mci.setLocationRelativeTo(null);
 
         this.dispose();

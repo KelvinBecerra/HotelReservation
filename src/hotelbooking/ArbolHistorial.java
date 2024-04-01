@@ -40,7 +40,7 @@ public class ArbolHistorial {
             }
         }
     }
-    
+    ///impresion del historial
     public String imprimir(NodoHistorial actual, String resultado) {
         if (actual != null) {
             resultado = this.imprimir(actual.getHijoIzquierdo(), resultado);

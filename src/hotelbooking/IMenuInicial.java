@@ -99,7 +99,7 @@ public class IMenuInicial extends javax.swing.JFrame {
         return nodes;
     }
 
-    public static HashClientes readClientesFromCSV(String filePath) {
+    public static HashClientes readClientesFromCSV(String filePath) {/// simplemente lo que se hace es leer cada linea y agg al hash de los clientes
         HashClientes nodes = new HashClientes();
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             // Read the header line

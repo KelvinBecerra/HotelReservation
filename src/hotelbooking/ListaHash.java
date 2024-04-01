@@ -38,7 +38,7 @@ public class ListaHash {
             }
         }
     }
-
+        ///busqueda del usuario en ek hash
     public NodoHash buscar(String nombre, String apellido) {
         if (this.primero != null) {
             NodoHash aux = this.primero;

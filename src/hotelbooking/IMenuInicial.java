@@ -35,7 +35,7 @@ public class IMenuInicial extends javax.swing.JFrame {
         this.setVisible(true);
     }
 
-    public static ArbolReserva readHabsReservasFromCSV(String filePath) {
+    public static ArbolReserva readHabsReservasFromCSV(String filePath) {/// simplemente lo que se hace es leer cada linea y agg al arbol de las reservas
         ArbolReserva nodes = new ArbolReserva(); /// nodes es una variable que solo definimos aqui
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             // Read the header line
@@ -68,7 +68,7 @@ public class IMenuInicial extends javax.swing.JFrame {
         return nodes;
     }
 
-    public static ArregloHabitaciones readHabsFromCSV(String filePath) {
+    public static ArregloHabitaciones readHabsFromCSV(String filePath) {/// simplemente lo que se hace es leer cada linea y agg al arbol de las habitaciones
         ArregloHabitaciones nodes = new ArregloHabitaciones();/// nodes otra vez solo se inicializa aqui
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             // Read the header line
@@ -99,7 +99,7 @@ public class IMenuInicial extends javax.swing.JFrame {
         return nodes;
     }
 
-    public static HashClientes readClientesFromCSV(String filePath) {
+    public static HashClientes readClientesFromCSV(String filePath) {/// simplemente lo que se hace es leer cada linea y agg al hash de los clientes
         HashClientes nodes = new HashClientes();
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             // Read the header line
@@ -296,7 +296,7 @@ public class IMenuInicial extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        IMenuCheckOut mco = new IMenuCheckOut(clientes, reservas, habs);
+        IMenuCheckOut mco = new IMenuCheckOut(clientes, reservas, habs);/// boton check out para acceder a menu del check out
         mco.setLocationRelativeTo(null);
 
         this.dispose();

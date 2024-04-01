@@ -22,7 +22,7 @@ public class ListaHash {
             this.ultimo = nuevo;
         }
     }
-
+        /// eliminacion del usuario en el hash 
     public void eliminar(String nombre, String apellido) {
         if (this.primero != null) {
             if (this.primero.getPrimer_nombre().toLowerCase().equals(nombre) || this.primero.getSegundo_nombre().toLowerCase().equals(apellido)) {
@@ -38,7 +38,7 @@ public class ListaHash {
             }
         }
     }
-
+        ///busqueda del usuario en ek hash
     public NodoHash buscar(String nombre, String apellido) {
         if (this.primero != null) {
             NodoHash aux = this.primero;

@@ -19,7 +19,7 @@ public class HashClientes {
     }
     
     public int hashCode(String primer_nombre, String segundo_nombre){
-        int hash = 14;
+        int hash = 14;/// conversion de nombre a un indice ya que el hash table trabaja llaves las cuales deben ser indices
         
         for (int i = 0; i < primer_nombre.length(); i++) {
             hash += primer_nombre.charAt(i);

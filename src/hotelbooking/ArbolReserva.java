@@ -11,7 +11,7 @@ public class ArbolReserva {
     public ArbolReserva() {
         root = null;
     }
-
+    ///creacion de la reservacion
     public void CrearReservacion(int ci, String primer_nombre, String segundo_nombre, String email, String genero, String tipo_hab, String celular, String fecha_llegada, String fecha_salida) {
         NodoReserva nueva = new NodoReserva(ci, primer_nombre, segundo_nombre, email, genero, tipo_hab, celular, fecha_llegada, fecha_salida);
         if (this.root != null) {
@@ -21,7 +21,7 @@ public class ArbolReserva {
             this.root = nueva;
         }
     }
-
+    ///insertar una reservacion
     private void insertar(NodoReserva nueva, NodoReserva reservaActual) {
         if (reservaActual != null) {
             if (reservaActual.getCi() >= nueva.getCi()) {
@@ -39,11 +39,11 @@ public class ArbolReserva {
             }
         }
     }
-
+    
     public NodoReserva BuscarReservacion(int ci) {
         return this.buscar(ci, root);
     }
-
+    ///busqueda de reservacion
     private NodoReserva buscar(int ci, NodoReserva reservaActual) {
         if (reservaActual != null) {
             NodoReserva buscar = null;
@@ -58,7 +58,7 @@ public class ArbolReserva {
         }
         return null;
     }
-
+    ///imprimir las reservaciones
     public String imprimir(NodoReserva reservaActual, String txt) {
         if (reservaActual != null) {
             txt = this.imprimir(reservaActual.getHijoIzquierdo(), txt);
@@ -73,7 +73,7 @@ public class ArbolReserva {
         this.root = eliminar(this.root, ci);
         System.out.println(this.BuscarReservacion(ci));
     }
-
+    /// eliminar reservacion balanceando el arbol
     private NodoReserva eliminar(NodoReserva reservaActual, int ci) {
         if (reservaActual == null) {
             return null;

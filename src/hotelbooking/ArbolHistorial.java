@@ -22,7 +22,7 @@ public class ArbolHistorial {
             this.insertar(nuevo, this.raiz);
         }
     }
-
+    ///insertar en el arbol del historial
     private void insertar(NodoHistorial nueva, NodoHistorial padre) {
         if (padre != null) {
             if (padre.getCi() >= nueva.getCi()) {
@@ -40,7 +40,7 @@ public class ArbolHistorial {
             }
         }
     }
-    
+    ///impresion del historial
     public String imprimir(NodoHistorial actual, String resultado) {
         if (actual != null) {
             resultado = this.imprimir(actual.getHijoIzquierdo(), resultado);

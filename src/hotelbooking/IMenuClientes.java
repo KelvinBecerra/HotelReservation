@@ -20,7 +20,7 @@ public class IMenuClientes extends javax.swing.JFrame {
         this.reservas = ar;
         this.habs = ah;
         this.setVisible(true);
-    }
+    } /// se  llama a los respectivos hash 
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -73,6 +73,11 @@ public class IMenuClientes extends javax.swing.JFrame {
 
         nombre.setFont(new java.awt.Font("Amazon Ember Display", 0, 14)); // NOI18N
         nombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 153)));
+        nombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nombreActionPerformed(evt);
+            }
+        });
         jPanel1.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 220, 30));
 
         jLabel3.setFont(new java.awt.Font("Amazon Ember Display", 0, 18)); // NOI18N
@@ -104,7 +109,7 @@ public class IMenuClientes extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         IMenuInicial menu = new IMenuInicial(clientes, reservas, habs);
-        menu.setLocationRelativeTo(null);
+        menu.setLocationRelativeTo(null); 
 
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -113,10 +118,14 @@ public class IMenuClientes extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             this.jTextArea1.setText(clientes.imprimir(this.nombre.getText().toLowerCase(), this.apellido.getText().toLowerCase()));
-        } catch (Exception e) {
+        } catch (Exception e) {/// llama a lo hash necesarios
             this.jTextArea1.setText("INGRESE UN NOMBRE Y APELLIDO VÁLIDOS");
         }
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombreActionPerformed
 
     /**
      * @param args the command line arguments

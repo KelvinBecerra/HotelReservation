@@ -69,7 +69,7 @@ public class IMenuInicial extends javax.swing.JFrame {
     }
 
     public static ArregloHabitaciones readHabsFromCSV(String filePath) {
-        ArregloHabitaciones nodes = new ArregloHabitaciones();
+        ArregloHabitaciones nodes = new ArregloHabitaciones();/// nodes otra vez solo se inicializa aqui
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             // Read the header line
             String[] header = null;
@@ -265,8 +265,8 @@ public class IMenuInicial extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        IMenuClientes mc = new IMenuClientes(clientes, reservas, habs);
+        // TODO add your handling code here: 
+        IMenuClientes mc = new IMenuClientes(clientes, reservas, habs);/// boton huespedes lleva a menu cliente
         mc.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
